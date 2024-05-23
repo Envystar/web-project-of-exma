@@ -90,6 +90,7 @@ a:link, a:visited{
 
 .main-table td {
     flex: 1;
+    flex: 1;
     margin: 2%;
 }
 .main-table-content {
@@ -101,8 +102,8 @@ a:link, a:visited{
 }
 
 .table-content-img {
-    flex: 1;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
