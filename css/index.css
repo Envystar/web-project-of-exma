@@ -23,7 +23,7 @@ header {
     z-index: 10; /*设置优先级最大*/
     color: #ffffff;
     background-color:rgba(0,0,0,0.5);
-    border-bottom: 1px #ffffff;
+    border-bottom: 2px solid #ffffff77;
 }
 
 .top-title {
@@ -86,7 +86,6 @@ a:link, a:visited{
 .header-box {
     width: 100%;
     overflow: hidden;
-    /* position: relative; */
 }
 
 .header-box-list {

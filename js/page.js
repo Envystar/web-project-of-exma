@@ -24,13 +24,14 @@ function animotion() {
             textElement.style.bottom = tar + 'px';
             textElement.style.height = tar + 'px';
             textElement.style.marginBottom = -tar + 'px';
+            textElement.style.boxShadow = '0px 0px 15px #ffffff';
         });
         textElement.addEventListener('mouseout', function() {
+            textElement.style.boxShadow = 'none'
             textElement.style.marginBottom = -init + 'px';
             textElement.style.height = init + 'px';
             textElement.style.bottom = init + 'px';
             curImg.style.transform = 'scale(1)';
-
         });
     });
 }
