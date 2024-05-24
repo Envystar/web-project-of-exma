@@ -90,7 +90,6 @@ a:link, a:visited{
 
 .main-table td {
     flex: 1;
-    flex: 1;
     margin: 2%;
 }
 .main-table-content {
@@ -103,7 +102,7 @@ a:link, a:visited{
 
 .table-content-img {
     width: 100%;
-    height: 100%;
+    flex: 1;
     overflow: hidden;
 }
 
@@ -126,7 +125,7 @@ a:link, a:visited{
     margin: 1% 0%;
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .table-content-text p {
