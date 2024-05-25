@@ -10,6 +10,7 @@ function load(){
         if(left <= -length){ 
             left=0;
         }
+        console.log(1);
         list.style.left=left + 'px';
     }, 10);
 };
