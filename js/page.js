@@ -1,24 +1,19 @@
-function load(){
-    var elements = document.querySelectorAll('.table-content-text');
-    elements.forEach(function(element) {
-        var childElement = element.querySelector('h2');
-        var computedStyle = window.getComputedStyle(childElement); // 获取计算后的样式
-        var marginTop = parseInt(computedStyle.getPropertyValue('margin-top')); // 获取上边距
-        var marginBottom = parseInt(computedStyle.getPropertyValue('margin-bottom')); // 获取下边距
-        var dx = childElement.offsetHeight + marginTop + marginBottom;
-        element.style.bottom = dx + 'px';
-    });
-};
-
 function animotion() {
     var boxElements = document.querySelectorAll('.main-table-content');
     var textElements = document.querySelectorAll('.table-content-text');
     var imgElements = document.querySelectorAll('.table-content-img img');
     textElements.forEach(function(textElement, index) {
-        var init = parseInt(textElement.style.bottom);
+        var childElement = textElement.querySelector('h2');
+        var computedStyle = window.getComputedStyle(childElement); // 获取计算后的样式
+        var marginTop = parseInt(computedStyle.getPropertyValue('margin-top')); // 获取上边距
+        var marginBottom = parseInt(computedStyle.getPropertyValue('margin-bottom')); // 获取下边距
+
+        var init = childElement.offsetHeight + marginTop + marginBottom;
         var tar = parseInt(textElement.offsetHeight);
         var curImg = imgElements[index];
         var curbox = boxElements[index];
+
+        textElement.style.bottom = init + 'px';
         textElement.style.height = init + 'px';
         textElement.style.marginBottom = -init + 'px';
         textElement.addEventListener('mouseover', function() {
@@ -37,5 +32,5 @@ function animotion() {
         });
     });
 }
-document.addEventListener('DOMContentLoaded',load);
+
 document.addEventListener('DOMContentLoaded',animotion);
